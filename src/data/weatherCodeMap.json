@@ -1,0 +1,263 @@
+{
+  "0": { "icon": "0.png", "description": "Ciel dégagé" },
+  "1": {
+    "icon": "1.png",
+    "description": "Ciel légèrement nuageux / Partiellement nuageux"
+  },
+  "2": { "icon": "2.png", "description": "Ciel nuageux" },
+  "3": { "icon": "3.png", "description": "Ciel très nuageux / Très couvert" },
+  "4": { "icon": "4.png", "description": "Ciel couvert / Couvert" },
+  "5": { "icon": "5.png", "description": "Brouillard" },
+  "6": { "icon": "36.png", "description": "Poussière" },
+  "7": { "icon": "36.png", "description": "Poussière" },
+  "8": { "icon": "36.png", "description": "Poussière" },
+  "9": { "icon": "36.png", "description": "Poussière" },
+  "10": {
+    "icon": "5.png",
+    "description": "Ciel avec brouillard épais ou avec une épaisseur de neige au sol"
+  },
+  "13": {
+    "icon": "17.png",
+    "description": "Orage, mais pas de précipitations au moment de l'observation"
+  },
+  "14": {
+    "icon": "4.png",
+    "description": "Précipitations visibles, atteignant le sol ou la surface de la mer, à proximité, mais pas à la station"
+  },
+  "15": {
+    "icon": "4.png",
+    "description": "Précipitations visibles, atteignant le sol ou la surface de la mer, à proximité, mais pas à la station"
+  },
+  "16": {
+    "icon": "4.png",
+    "description": "Précipitations visibles, atteignant le sol ou la surface de la mer, à proximité, mais pas à la station"
+  },
+  "17": {
+    "icon": "17.png",
+    "description": "Orage, mais pas de précipitations au moment de l'observation"
+  },
+  "20": { "icon": "4.png", "description": "Pluie (pas glaciale)" },
+  "21": { "icon": "4.png", "description": "Pluie (pas glaciale)" },
+  "22": { "icon": "4.png", "description": "Pluie (pas glaciale)" },
+  "23": { "icon": "4.png", "description": "Pluie (pas glaciale)" },
+  "24": { "icon": "4.png", "description": "Averse(s) de pluie" },
+  "25": { "icon": "4.png", "description": "Pluie (pas glaciale)" },
+  "26": {
+    "icon": "4.png",
+    "description": "Averse(s) de neige, ou de pluie et de neige"
+  },
+  "27": {
+    "icon": "4.png",
+    "description": "Averse(s) de grêle *, ou de pluie et de grêle *"
+  },
+  "28": { "icon": "5.png", "description": "Brouillard ou brouillard glacé" },
+  "29": {
+    "icon": "17.png",
+    "description": "Orage (avec ou sans précipitations)"
+  },
+  "30": {
+    "icon": "36.png",
+    "description": "Tempête de poussière ou tempête de sable légère ou modérée"
+  },
+  "31": {
+    "icon": "36.png",
+    "description": "Tempête de poussière ou tempête de sable légère ou modérée"
+  },
+  "32": {
+    "icon": "36.png",
+    "description": "Tempête de poussière ou tempête de sable légère ou modérée"
+  },
+  "33": {
+    "icon": "17!.png",
+    "description": "Forte tempête de poussière ou tempête de sable"
+  },
+  "34": {
+    "icon": "17!.png",
+    "description": "Forte tempête de poussière ou tempête de sable"
+  },
+  "35": {
+    "icon": "17!.png",
+    "description": "Forte tempête de poussière ou tempête de sable"
+  },
+  "36": { "icon": "13.png", "description": "Poudrerie légère ou modérée" },
+  "37": { "icon": "13.png", "description": "Fortes chutes de neige" },
+  "38": { "icon": "13.png", "description": "Poudrerie légère ou modérée" },
+  "39": { "icon": "13.png", "description": "Fortes chutes de neige" },
+  "40": {
+    "icon": "5.png",
+    "description": "Brouillard ou brouillard glacé à distance"
+  },
+  "41": {
+    "icon": "5.png",
+    "description": "Brouillard ou brouillard glacé par plaques"
+  },
+  "42": {
+    "icon": "5.png",
+    "description": "Brouillard ou brouillard glacé, ciel visible"
+  },
+  "43": {
+    "icon": "5.png",
+    "description": "Brouillard ou brouillard glacé, ciel invisible"
+  },
+  "44": {
+    "icon": "5.png",
+    "description": "Brouillard ou brouillard glacé, ciel visible"
+  },
+  "45": {
+    "icon": "5.png",
+    "description": "Brouillard ou brouillard glacé, ciel invisible"
+  },
+  "46": {
+    "icon": "5.png",
+    "description": "Brouillard ou brouillard glacé, ciel visible"
+  },
+  "47": {
+    "icon": "5.png",
+    "description": "Brouillard ou brouillard glacé, ciel invisible"
+  },
+  "48": {
+    "icon": "5.png",
+    "description": "Brouillard, dépôt de givre, ciel visible"
+  },
+  "49": {
+    "icon": "5.png",
+    "description": "Brouillard, dépôt de givre, ciel invisible"
+  },
+  "50": {
+    "icon": "4.png",
+    "description": "Bruine, non glaciale, intermittente"
+  },
+  "51": { "icon": "4.png", "description": "Bruine, non glaciale, continue" },
+  "52": {
+    "icon": "4.png",
+    "description": "Bruine, non glaciale, intermittente"
+  },
+  "53": { "icon": "4.png", "description": "Bruine, non glaciale, continue" },
+  "54": {
+    "icon": "4.png",
+    "description": "Bruine, non glaciale, intermittente"
+  },
+  "55": { "icon": "4.png", "description": "Bruine, non glaciale, continue" },
+  "56": { "icon": "4.png", "description": "Bruine, glaciale, légère" },
+  "57": {
+    "icon": "4.png",
+    "description": "Bruine verglaçante, modérée ou forte (dense)"
+  },
+  "58": {
+    "icon": "4.png",
+    "description": "Bruine et pluie, faibles ou modérées"
+  },
+  "59": {
+    "icon": "4.png",
+    "description": "Bruine et pluie, modérées ou fortes"
+  },
+  "60": {
+    "icon": "4.png",
+    "description": "Pluie, non glaciale, intermittente"
+  },
+  "61": { "icon": "4.png", "description": "Pluie, non glaciale, continue" },
+  "62": {
+    "icon": "4.png",
+    "description": "Pluie, non glaciale, intermittente"
+  },
+  "63": { "icon": "4.png", "description": "Pluie, non glaciale, continue" },
+  "64": {
+    "icon": "4.png",
+    "description": "Pluie, non glaciale, intermittente"
+  },
+  "65": { "icon": "4.png", "description": "Pluie, non glaciale, continue" },
+  "66": { "icon": "4.png", "description": "Pluie, verglaçante, légère" },
+  "67": {
+    "icon": "4.png",
+    "description": "Pluie, verglaçante, modérée ou forte (dense)"
+  },
+  "68": {
+    "icon": "4.png",
+    "description": "Pluie ou bruine et neige, faibles ou modérées, discontinues"
+  },
+  "69": {
+    "icon": "4.png",
+    "description": "Pluie ou bruine et neige, modérées ou fortes"
+  },
+  "70": {
+    "icon": "13.png",
+    "description": "Chute intermittente de flocons de neige"
+  },
+  "71": {
+    "icon": "13.png",
+    "description": "Chute continue de flocons de neige"
+  },
+  "72": {
+    "icon": "13.png",
+    "description": "Chute intermittente de flocons de neige"
+  },
+  "73": {
+    "icon": "13.png",
+    "description": "Chute continue de flocons de neige"
+  },
+  "74": {
+    "icon": "13.png",
+    "description": "Chute intermittente de flocons de neige"
+  },
+  "75": {
+    "icon": "13.png",
+    "description": "Chute continue de flocons de neige"
+  },
+  "76": {
+    "icon": "13.png",
+    "description": "Grains de neige ou de glace (granules)"
+  },
+  "77": {
+    "icon": "13.png",
+    "description": "Grains de neige ou de glace (granules)"
+  },
+  "78": {
+    "icon": "13.png",
+    "description": "Grains de neige ou de glace (granules)"
+  },
+  "79": {
+    "icon": "13.png",
+    "description": "Grains de neige ou de glace (granules)"
+  },
+  "80": { "icon": "4.png", "description": "Averse(s) de pluie" },
+  "81": {
+    "icon": "4.png",
+    "description": "Averse(s) de pluie modérée ou forte"
+  },
+  "82": { "icon": "4.png", "description": "Averse(s) de pluie violente" },
+  "83": {
+    "icon": "4.png",
+    "description": "Averse(s) de pluie et de neige mêlées"
+  },
+  "84": { "icon": "4.png", "description": "Averse(s) de neige" },
+  "85": { "icon": "4.png", "description": "Averse(s) de neige faible" },
+  "86": {
+    "icon": "4.png",
+    "description": "Averse(s) de neige modérée ou forte"
+  },
+  "87": { "icon": "4.png", "description": "Averse(s) de grêle légère" },
+  "88": {
+    "icon": "4.png",
+    "description": "Averse(s) de grêle modérée ou forte"
+  },
+  "89": { "icon": "4.png", "description": "Averse(s) de grêle violente" },
+  "90": { "icon": "4.png", "description": "Averse(s) de pluie" },
+  "91": {
+    "icon": "4.png",
+    "description": "Averse(s) de pluie modérée ou forte"
+  },
+  "92": { "icon": "4.png", "description": "Averse(s) de pluie violente" },
+  "93": { "icon": "4.png", "description": "Averse(s) de neige" },
+  "94": {
+    "icon": "4.png",
+    "description": "Averse(s) de neige modérée ou forte"
+  },
+  "95": { "icon": "17.png", "description": "Orage, faible ou modéré" },
+  "96": { "icon": "17.png", "description": "Orage, avec grêle" },
+  "97": { "icon": "17.png", "description": "Orage, violent" },
+  "98": { "icon": "17.png", "description": "Orage, très violent avec grêle" },
+  "99": {
+    "icon": "17.png",
+    "description": "Orage, violent, avec grêle et/ou rafales de vent violentes"
+  }
+}
