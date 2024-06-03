@@ -6,6 +6,12 @@ const WeatherOfTheDay = ({ date, current, weatherInfo }) => {
     <div>
       <h2>Données météo du jour</h2>
       <p>Date: {date}</p>
+      <img
+        className="w-20 h-20"
+        src={`./icons/${weatherInfo.icon}`}
+        alt={weatherInfo.description}
+      />
+      <p>{weatherInfo.description}</p>
       <WeatherDetails
         label="Température extérieure"
         value={current.temperature_2m}
@@ -51,8 +57,6 @@ const WeatherOfTheDay = ({ date, current, weatherInfo }) => {
         value={current.cloud_cover}
         unit="%"
       />
-      <img src={`./icons/${weatherInfo.icon}`} alt={weatherInfo.description} />
-      <p>{weatherInfo.description}</p>
     </div>
   );
 };

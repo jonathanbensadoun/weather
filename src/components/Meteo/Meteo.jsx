@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import weatherCodeMap from '../../data/weatherCodeMap.json';
 import WeatherDetails from '../WeatherDetails/WeatherDetails';
 import WeatherOfTheDay from '../WeatherOfTheDay/WeatherOfTheDay';
+import WeatherOfTheWeek from '../WeatherOfTheWeek/WeatherOfTheWeek';
 
 const getWeatherInfo = (weatherCode) => {
   return (
@@ -22,7 +23,7 @@ const getCityName = (cityName) => {
   );
 };
 
-const Meteo = ({ dataDay, cityName }) => {
+const Meteo = ({ dataDay, cityName, dataWeek }) => {
   const [date, setDate] = useState(null);
   const [weatherInfo, setWeatherInfo] = useState({ icon: '', description: '' });
 
@@ -58,14 +59,19 @@ const Meteo = ({ dataDay, cityName }) => {
   const { current } = dataDay;
 
   return (
-    <div>
-      <h1>Météo de {city}</h1>
+    <div className="p-4 ">
+      <h1 className="">Météo de {city}</h1>
 
       <WeatherOfTheDay
         date={date}
         current={current}
         weatherInfo={weatherInfo}
       />
+      <h2>Prévisions météo de la semaine</h2>
+      {/* {dataWeek.temperature_2m_max.map((day, index) => (
+        <p key={index}>- {day.temperature_2m_max}°C</p>
+      ))} */}
+      <WeatherOfTheWeek weatherData={dataWeek} />
     </div>
   );
 };
