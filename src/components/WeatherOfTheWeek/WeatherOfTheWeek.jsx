@@ -19,17 +19,19 @@ const WeatherOfTheWeek = ({ weatherData }) => {
   }
 
   return (
-    <div className="flex ">
+    <div className="flex text-xs justify-center items-center flex-wrap">
       {days.map((date, index) => (
-        <div key={index}>
+        <div
+          className="flex flex-col justify-center items-center w-1/3 p-4"
+          key={index}
+        >
           <h2>
-            Date :{' '}
             {new Date(date).toLocaleDateString('fr-FR', { weekday: 'long' })}
           </h2>
           {weatherData && weatherData.daily && (
             <>
               <img
-                className="w-20 h-20"
+                className="w-12 h-12"
                 src={`./icons/${
                   weatherCodeMap[weatherData.daily.weather_code[index + 1]].icon
                 }`}
@@ -41,14 +43,18 @@ const WeatherOfTheWeek = ({ weatherData }) => {
             </>
           )}
           <p>
+            {weatherData.daily.temperature_2m_max[index + 1]}°/
+            {weatherData.daily.temperature_2m_min[index + 1]}°
+          </p>
+          {/* <p className="">
             Température maximale :{' '}
             {weatherData.daily.temperature_2m_max[index + 1]}°C
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Température minimale :{' '}
             {weatherData.daily.temperature_2m_min[index + 1]}°C
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Lever du soleil :{' '}
             {new Date(weatherData.daily.sunrise[index + 1]).toLocaleTimeString(
               'fr-FR',
@@ -57,8 +63,8 @@ const WeatherOfTheWeek = ({ weatherData }) => {
                 minute: '2-digit',
               }
             )}
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Coucher du soleil :{' '}
             {new Date(weatherData.daily.sunset[index + 1]).toLocaleTimeString(
               'fr-FR',
@@ -67,34 +73,34 @@ const WeatherOfTheWeek = ({ weatherData }) => {
                 minute: '2-digit',
               }
             )}
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Durée du jour :{' '}
             {convertSecondsToHoursAndMinutes(
               weatherData.daily.daylight_duration[index + 1]
             )}
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Durée d'ensoleillement :{' '}
             {convertSecondsToHoursAndMinutes(
               weatherData.daily.sunshine_duration[index + 1]
             )}
-          </p>
+          </p> */}
 
-          <p>
+          {/* <p>
             Heures de précipitation :{' '}
             {weatherData.daily.precipitation_hours[index + 1]}h
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Vitesse maximale du vent :{' '}
             {weatherData.daily.wind_speed_10m_max[index + 1]}
             km/h
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Rafales maximales du vent :{' '}
             {weatherData.daily.wind_gusts_10m_max[index + 1]}
             km/h
-          </p>
+          </p> */}
         </div>
       ))}
     </div>
