@@ -31,7 +31,7 @@ function App() {
       );
     }
   }, []);
-
+  //dwd-icon
   useEffect(() => {
     async function fetchDataWeek() {
       if (latitude !== null && longitude !== null) {
@@ -75,7 +75,7 @@ function App() {
           .then((response) => response.json())
           .then((data) => {
             if (data) {
-              // console.log('jour', data);
+              console.log('jour', data);
               // console.log('jour', data.current);
               setDataDay(data);
             }
@@ -113,7 +113,7 @@ function App() {
   }, [latitude, longitude]);
 
   return (
-    <div className="App bg-blue-900 h-screen flex justify-center items-center text-normal p-6 ">
+    <div className="App bg-primary h-screen flex justify-center items-start font-bold text-normal text-shadow-custom-md">
       <Meteo dataDay={dataDay} cityName={cityName} dataWeek={dataWeek} />
     </div>
   );

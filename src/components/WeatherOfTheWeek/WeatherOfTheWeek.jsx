@@ -2,6 +2,8 @@ import React from 'react';
 
 import weatherCodeMap from '../../data/weatherCodeMap.json';
 
+import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
+
 const WeatherOfTheWeek = ({ weatherData }) => {
   const days = weatherData.daily.time.slice(1);
 
@@ -19,13 +21,13 @@ const WeatherOfTheWeek = ({ weatherData }) => {
   }
 
   return (
-    <div className="flex text-xs justify-center items-center flex-wrap">
+    <div className="flex text-xs justify-center items-center flex-wrap mt-4">
       {days.map((date, index) => (
         <div
-          className="flex flex-col justify-center items-center w-1/3 p-4"
+          className="flex flex-col justify-center items-center w-1/3 p-4 border-solid border-2 bg-secondary border-gray-300 rounded-lg m-2 shadow-md "
           key={index}
         >
-          <h2>
+          <h2 className="text-lg">
             {new Date(date).toLocaleDateString('fr-FR', { weekday: 'long' })}
           </h2>
           {weatherData && weatherData.daily && (
@@ -42,10 +44,16 @@ const WeatherOfTheWeek = ({ weatherData }) => {
               />
             </>
           )}
-          <p>
-            {weatherData.daily.temperature_2m_max[index + 1]}°/
-            {weatherData.daily.temperature_2m_min[index + 1]}°
-          </p>
+          <div className="flex flex-row">
+            <div className="flex flex-row justify-end items-end ">
+              <FaLongArrowAltUp className="text-red-400" />
+              {weatherData.daily.temperature_2m_max[index + 1]}°
+            </div>
+            <div className="flex flex-row justify-end items-end">
+              <FaLongArrowAltDown className="text-blue-400" />
+              {weatherData.daily.temperature_2m_min[index + 1]}°{' '}
+            </div>
+          </div>
           {/* <p className="">
             Température maximale :{' '}
             {weatherData.daily.temperature_2m_max[index + 1]}°C

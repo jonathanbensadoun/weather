@@ -59,7 +59,7 @@ const Meteo = ({ dataDay, cityName, dataWeek }) => {
   const { current } = dataDay;
 
   return (
-    <div className=" bg-white bg-opacity-50 rounded-2xl w-full p-2 ">
+    <div className="w-full h-full">
       {/* <h1 className="">Météo de {city}</h1> */}
 
       <WeatherOfTheDay
@@ -67,6 +67,7 @@ const Meteo = ({ dataDay, cityName, dataWeek }) => {
         current={current}
         weatherInfo={weatherInfo}
       />
+
       {/* <h2>Prévisions météo de la semaine</h2> */}
       {/* {dataWeek.temperature_2m_max.map((day, index) => (
         <p key={index}>- {day.temperature_2m_max}°C</p>
