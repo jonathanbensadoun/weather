@@ -9,7 +9,7 @@ export default {
         secondary: '#081e68',
       },
       backgroundImage: (theme) => ({
-        'custom-bg': "url('./img/bg.jpg')",
+        'custom-bg': "url('/img/bg.jpg')",
       }),
       textShadow: {
         custom: '2px 2px 2px rgba(0, 0, 0, 0.5)',
