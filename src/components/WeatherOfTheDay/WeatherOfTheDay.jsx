@@ -1,10 +1,11 @@
 import React from 'react';
 import WeatherDetails from '../WeatherDetails/WeatherDetails';
 
-const WeatherOfTheDay = ({ date, current, weatherInfo }) => {
+const WeatherOfTheDay = ({ date, current, weatherInfo, cityName }) => {
   return (
     <div className="flex flex-col justify-around items-center bg-custom-bg bg-cover bg-center p-2 w-full h-1/2 rounded-b-3xl text-2xl">
       <div className="flex flex-col justify-center items-center">
+        <h1 className="">Météo de {cityName}</h1>
         <div className="flex flex-row items-end">
           <h1 className="text-6xl font-bold text-normal sm:text-green-400 md:text-blue-400 lg:text-red-400 xl:text-yellow-400 2xl:text-purple-400">
             {current.temperature_2m}°C

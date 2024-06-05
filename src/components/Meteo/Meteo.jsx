@@ -60,12 +60,11 @@ const Meteo = ({ dataDay, cityName, dataWeek }) => {
 
   return (
     <div className="h-full w-full">
-      {/* <h1 className="">Météo de {city}</h1> */}
-
       <WeatherOfTheDay
         date={date}
         current={current}
         weatherInfo={weatherInfo}
+        cityName={city}
       />
 
       {/* <h2>Prévisions météo de la semaine</h2> */}
