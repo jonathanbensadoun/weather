@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './App.scss';
 import Meteo from '../Meteo/Meteo';
 import FOG from 'vanta/dist/vanta.fog.min';
+import CLOUDS from 'vanta/dist/vanta.clouds.min';
 import * as THREE from 'three';
 
 function App() {
@@ -119,17 +120,17 @@ function App() {
   useEffect(() => {
     let vantaEffect;
     if (myRef.current) {
-      vantaEffect = FOG({
+      vantaEffect = CLOUDS({
         el: myRef.current,
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
         minHeight: 200.0,
         minWidth: 200.0,
-        highlightColor: 0xe1ff,
-        midtoneColor: 0x478ca2,
-        lowlightColor: 0x96ff,
-        baseColor: 0xffffff,
+        // highlightColor: 0xe1ff,
+        // midtoneColor: 0x478ca2,
+        // lowlightColor: 0x96ff,
+        // baseColor: 0xffffff,
         zoom: 0.2,
         THREE: THREE,
       });
