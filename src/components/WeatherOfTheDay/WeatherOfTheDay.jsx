@@ -10,14 +10,14 @@ const WeatherOfTheDay = ({ date, current, weatherInfo, cityName }) => {
     <div className=" h-2/3 lg:h-auto text-primary">
       <div className="flex flex-col md:flex-row justify-around items-center  rounded-b-3xl lg:bg-transparent p-2 w-full h-full   text-2xl ">
         <div className="flex flex-col justify-center items-center">
-          <p className="hidden md:block ">Date: {date}</p>
+          <p className="hidden md:block ">{date}</p>
           <h1 className="">Météo de {cityName}</h1>
           <div className="flex flex-row items-end">
             <h1 className="text-6xl md:text-8xl font-bold">
               {current.temperature_2m}°C
             </h1>
             <img
-              className="w-20 h-20 ml-2 md:w-16 md:h-16"
+              className="w-20 h-20 ml-2 md:w-24 md:h-24"
               src={`./icons/${weatherInfo.icon}`}
               alt={weatherInfo.description}
             />
