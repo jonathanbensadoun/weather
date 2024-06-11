@@ -78,7 +78,7 @@ function App() {
           .then((response) => response.json())
           .then((data) => {
             if (data) {
-              console.log('jour', data);
+              // console.log('jour', data);
               // console.log('jour', data.current);
               setDataDay(data);
             }
@@ -120,18 +120,16 @@ function App() {
   useEffect(() => {
     let vantaEffect;
     if (myRef.current) {
-      vantaEffect = CLOUDS({
+      vantaEffect = FOG({
         el: myRef.current,
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        // highlightColor: 0xe1ff,
-        // midtoneColor: 0x478ca2,
-        // lowlightColor: 0x96ff,
-        // baseColor: 0xffffff,
-        zoom: 0.2,
+        highlightColor: 0xb3e5fc, // light blue
+        midtoneColor: 0x3a9fca, // medium blue
+        lowlightColor: 0x29b6f6, // darker blue
+        baseColor: 0xe0eff7,
+        zoom: 0.4,
         THREE: THREE,
       });
     }
