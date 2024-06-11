@@ -6,8 +6,8 @@ import CLOUDS from 'vanta/dist/vanta.clouds.min';
 import * as THREE from 'three';
 
 function App() {
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
+  const [latitude, setLatitude] = useState(48.86);
+  const [longitude, setLongitude] = useState(2.35);
   const [cityName, setCityName] = useState(null);
   const [dataDay, setDataDay] = useState(null);
   const [dataWeek, setDataWeek] = useState(null);
@@ -95,9 +95,7 @@ function App() {
     if (latitude !== null && longitude !== null) {
       async function fetchDataCity() {
         await fetch(
-          `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${
-            latitude + 1
-          }&lon=${longitude + 1}`
+          `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`
         )
           .then((response) => response.json())
           .then((data) => {
