@@ -59,7 +59,7 @@ const Meteo = ({ dataDay, cityName, dataWeek }) => {
   const { current } = dataDay;
 
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full  lg:bg-opacity-50  lg:flex lg:flex-col lg:justify-center lg:items-center">
       <WeatherOfTheDay
         date={date}
         current={current}

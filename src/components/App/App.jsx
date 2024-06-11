@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.scss';
 import Meteo from '../Meteo/Meteo';
+import FOG from 'vanta/dist/vanta.fog.min';
+import * as THREE from 'three';
 
 function App() {
   const [latitude, setLatitude] = useState(null);
@@ -112,8 +114,35 @@ function App() {
     }
   }, [latitude, longitude]);
 
+  const myRef = useRef(null);
+
+  useEffect(() => {
+    let vantaEffect;
+    if (myRef.current) {
+      vantaEffect = FOG({
+        el: myRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        highlightColor: 0xe1ff,
+        midtoneColor: 0x478ca2,
+        lowlightColor: 0x96ff,
+        baseColor: 0xffffff,
+        zoom: 0.2,
+        THREE: THREE,
+      });
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, []);
   return (
-    <div className="App bg-primary h-screen flex justify-center items-start font-bold text-normal text-shadow-custom-md">
+    <div
+      ref={myRef}
+      className="App bg-primary h-screen flex justify-center items-start font-bold text-normal text-shadow-custom-md lg:px-20 lg:py-10"
+    >
       <Meteo dataDay={dataDay} cityName={cityName} dataWeek={dataWeek} />
     </div>
   );

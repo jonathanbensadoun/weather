@@ -24,7 +24,7 @@ const WeatherOfTheWeek = ({ weatherData }) => {
     <div className="flex text-xs justify-center items-center flex-wrap mt-4">
       {days.map((date, index) => (
         <div
-          className="flex flex-col justify-center items-center w-1/4 p-4 border-solid border-2 bg-secondary border-gray-300 rounded-lg m-2 shadow-md "
+          className="flex flex-col justify-center items-center p-4 border-solid border-2 bg-secondary border-gray-300 rounded-lg m-2 shadow-md "
           key={index}
         >
           <h2 className="text-lg">
@@ -54,14 +54,7 @@ const WeatherOfTheWeek = ({ weatherData }) => {
               {weatherData.daily.temperature_2m_min[index + 1]}°{' '}
             </div>
           </div>
-          {/* <p className="">
-            Température maximale :{' '}
-            {weatherData.daily.temperature_2m_max[index + 1]}°C
-          </p> */}
-          {/* <p>
-            Température minimale :{' '}
-            {weatherData.daily.temperature_2m_min[index + 1]}°C
-          </p> */}
+
           <p className="hidden md:block">
             Lever du soleil :{' '}
             {new Date(weatherData.daily.sunrise[index + 1]).toLocaleTimeString(
