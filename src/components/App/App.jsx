@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.scss';
-import Meteo from '../Meteo/Meteo';
 import FOG from 'vanta/dist/vanta.fog.min';
-import CLOUDS from 'vanta/dist/vanta.clouds.min';
-import * as THREE from 'three';
+import Meteo from '../Meteo/Meteo';
 
 function App() {
   const [latitude, setLatitude] = useState(48.86);
@@ -16,10 +14,10 @@ function App() {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         function (position) {
-          const latitude = position.coords.latitude.toFixed(2);
-          const longitude = position.coords.longitude.toFixed(2);
-          setLatitude(latitude);
-          setLongitude(longitude);
+          const lat = position.coords.latitude.toFixed(2);
+          const lon = position.coords.longitude.toFixed(2);
+          setLatitude(lat);
+          setLongitude(lon);
         },
         function (error) {
           console.error(
@@ -34,7 +32,7 @@ function App() {
       );
     }
   }, []);
-  //dwd-icon
+
   useEffect(() => {
     async function fetchDataWeek() {
       if (latitude !== null && longitude !== null) {
@@ -50,8 +48,6 @@ function App() {
           .then((response) => response.json())
           .then((data) => {
             if (data) {
-              // console.log('semaine', JSON.stringify(data));
-              // console.log('semaine', data);
               setDataWeek(data);
             }
           })
@@ -64,51 +60,51 @@ function App() {
   }, [latitude, longitude]);
 
   useEffect(() => {
-    if (latitude !== null && longitude !== null) {
-      async function fetchDataDay() {
-        fetch(
-          `https://api.open-meteo.com/v1/meteofrance?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m`,
-          {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-            },
+    async function fetchDataDay() {
+      fetch(
+        `https://api.open-meteo.com/v1/meteofrance?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m`,
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          if (data) {
+            setDataDay(data);
           }
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            if (data) {
-              // console.log('jour', data);
-              // console.log('jour', data.current);
-              setDataDay(data);
-            }
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });
-      }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+
+    if (latitude !== null && longitude !== null) {
       fetchDataDay();
     }
   }, [latitude, longitude]);
 
+  async function fetchDataCity() {
+    await fetch(
+      `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          // console.log('where', data);
+
+          setCityName(data.address);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+
   useEffect(() => {
     if (latitude !== null && longitude !== null) {
-      async function fetchDataCity() {
-        await fetch(
-          `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            if (data) {
-              // console.log('where', data);
-
-              setCityName(data.address);
-            }
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });
-      }
       fetchDataCity();
     }
   }, [latitude, longitude]);
@@ -128,7 +124,6 @@ function App() {
         lowlightColor: 0x29b6f6, // darker blue
         baseColor: 0xe0eff7,
         zoom: 0.4,
-        THREE: THREE,
       });
     }
     return () => {
